@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="Stylesheet" type="text/css" href="../vimwiki-assets/markdown.css" />
+	<link rel="Stylesheet" type="text/css" href="../vimwiki-assets/github.css" />
+    <link type="text/css" rel="stylesheet" href="../vimwiki-assets/vendor/blog.css" />
+    <link type="text/css" rel="stylesheet/less" href="../vimwiki-assets/vendor/blog.less">
+    <link type="text/css" rel="stylesheet" href="../vimwiki-assets/vendor/prettify.css" />
+	<title>%title%</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+	<div class="content">
+		%content%
+	</div>
+<script type="text/javascript" src="../vimwiki-assets/highlight.pack.js"></script>
+<script type="text/javascript" src="../vimwiki-assets/zepto.min.js"></script>
+<script type="text/javascript" src="../vimwiki-assets/vendor/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="../vimwiki-assets/vendor/prettify/prettify.js"></script>
+<script type="text/javascript" src="../vimwiki-assets/vendor/jquery.tagcanvas-1.18.min.js"></script>
+<script type="text/javascript">
+
+    $(function(){
+        /* GoogleCode: prettyprint */
+        //$("pre").addClass("prettyprint");
+        //prettyPrint();
+
+        /* render abbr. 
+         * <span class="abbr">Abc Def</span>    =>
+         * <span class="abbr"><span class="abbrc">A</span>bc <span class="abbrc">D</span>ef</span>    =>
+         */
+        $(".abbr").each(function(){
+            var ws = $(this).text().split(" ");     /* words */
+            var res = "";
+            $.each(ws, function(i, w){              /* each string in words, render first character */
+                res += '<span class="abbrc">' + w[0] + '</span>' + w.substring(1, w.length) + " ";
+            });
+            $(this).html(res.substring(0, res.length - 1));     /* render it! */
+        });
+
+        /* all external links open in new tab */
+        $("a[href^='http://']").each(function(){
+                this.target = "_blank";
+        });
+        $("a[href^='https://']").each(function(){
+                this.target = "_blank";
+        });
+
+    }); 
+    
+$('pre').each(function(index,item){ $(item).html('<code>'+$(item).html()+'</code>'); });
+hljs.initHighlightingOnLoad();
+
+    /* see also: http://www.goat1000.com/tagcanvas.php */
+    $(document).ready(function() {
+        /* html5 tag clouds */
+        if(!$("#myCanvas").tagcanvas({
+            textColour: "#00F",
+            outlineColour: "#FF9999",
+            textHeight: 20,
+            minBrightnes: 0.2,
+            pulsateTo: 0.6,
+            initial: [0.1,-0.1],
+            reverse: true,
+            depth: 0.92,
+            decel: 0.98,
+            shadow: "#CCF",
+            shadowBlur: 1,
+            reverse: true,
+            outlineThickness: 1,
+            maxSpeed: 0.08 }, "tags")) {
+                $("#myCanvasContainer").hide();
+            }
+    });
+
+$(function(){
+    var txt = "返回顶部";
+    var elem = $('<div class="backtotop"></div>')
+    .appendTo($("body"))
+    .text(txt)
+    .attr("title", txt)
+    .click(function(){
+        $("html, body").animate({scrollTop:0},120);
+        });
+    var backtop = function() {
+        ($(document).scrollTop() > 0) ? elem.show() : elem.hide();
+    };
+    $(window).bind("scroll", backtop);
+    });
+    
+</script>
+</body>
+</html>
