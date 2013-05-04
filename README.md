@@ -1,3 +1,10 @@
+2013.05.04
+----------
+
+参考 http://www.berlinix.com/vim/vimwiki_with_bootstrap_jquery.php
+
+old
+----------
 
 style([markdown.css](http://kevinburke.bitbucket.org/markdowncss/)) and code
 highlight(through [highlight.js](http://softwaremaniacs.org/soft/highlight/)
@@ -33,7 +40,7 @@ then, get this repo
 ```sh
 mkdir -p path/to/export/folder
 cd !$
-git clone https://github.com/zweifisch/vimwiki-assets
+git clone https://github.com/yangjiandong/vimwiki-assets
 ```
 
 finally, open an wiki run `:VimwikiAll2HTML`
