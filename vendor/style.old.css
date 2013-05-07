@@ -1,0 +1,156 @@
+/* vim: set et sw=4 ts=4 sts=4 fdm=marker ff=unix fenc=utf8 nobomb: */
+/**
+ * VimWiki Custom Style
+ *
+ * @author mingcheng<i.feelinglucky#gmail.com>
+ * @link   http://www.gracecode.com/
+ *
+ * Minor changes by Eth2net<eth2net[at]gmail.com>
+ */
+
+body {
+    font-family: Droid Sans,Georgia,Times,sans-serif;
+    font-size: 100%;
+    line-height: 130%;
+    margin: 0;
+    padding: 0em 5em 0 5em;
+    margin: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.5em; 
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 2.0em;
+    color: #000000;
+    border-bottom: 1px dashed #000000;
+    line-height: 1.5em;
+}
+
+h2 {
+    margin-bottom: 1px dashed #000000;
+    font-size: 1.6em;
+    color: #779977;
+}
+h3 {
+    font-size: 1.3em;
+    color: #555577;
+}
+h4 {font-size: 1.2em; color: #222244;}
+h5 {font-size: 1.1em; color: #222244;}
+h6 {font-size: 1.0em; color: #222244;}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: #224;
+    border-bottom: 1px dotted #224;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:visited {
+
+}
+
+pre {
+    font-size: 1.4em;
+    border-left: 3px solid #ccc;
+    margin-left: 2em; 
+    padding-left: 0.5em;
+}
+
+p, pre, blockquote, table, ul, ol, dl {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+li {
+    margin: 0.3em auto;
+}
+
+ul {
+    margin-left: 2em; padding-left: 0.5em;
+}
+
+dt {
+    font-weight: bold;
+    margin: .5em 0;
+}
+
+dt {
+    text-indent: 1em;
+}
+
+p {
+    text-indent: 1em;
+}
+
+img {
+    border: none;
+}
+
+blockquote {
+    padding: 0.4em;
+    background-color: #f6f5eb;
+}
+
+th, td {border: 1px solid #ccc; padding: 0.3em;}
+th {background-color: #f0f0f0;}
+hr {border: none; border-top: 1px solid #ccc; width: 100%;}
+del {text-decoration: line-through; color: #777777;}
+.todo {font-weight: bold; background-color: #f0ece8; color: #a03020;}
+.justleft {text-align: left;}
+.justright {text-align: right;}
+.justcenter {text-align: center;}
+
+.toc {
+    float: right;
+    border: 1px dashed #000000;
+    margin: 0 0 0 2em;
+    padding: 0 1em;
+    position: fixed;
+    right: 0;
+}
+
+.toc > ul {
+    margin-left: 0;
+}
+
+.toc > ul > li {
+    list-style: none;
+}
+
+#content {
+    margin-top: 20px;
+    display: block;
+}
+
+#content div.toc li a:hover {
+    background: none repeat scroll 0 0 grey;
+}
+
+#footer  {
+    border-top: 1px dashed #224;
+    margin-top: 2em;
+    text-align: right;
+    padding: 1em 0;
+    font-size: small;
+}
+
+#footer #goindex {
+    float: left;
+}
+
+#licence {
+    float:left
+}

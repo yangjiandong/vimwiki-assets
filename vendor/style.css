@@ -1,0 +1,45 @@
+
+th, td {border: 1px solid #ccc; padding: 0.3em;}
+th {background-color: #f0f0f0;}
+
+.toc {
+    float: right;
+    border: 1px dashed #000000;
+    margin: 0 0 0 2em;
+    padding: 0 1em;
+    position: fixed;
+    right: 0;
+}
+
+.toc > ul {
+    margin-left: 0;
+}
+
+.toc > ul > li {
+    list-style: none;
+}
+
+#content {
+    margin-top: 20px;
+    display: block;
+}
+
+#content div.toc li a:hover {
+    background: none repeat scroll 0 0 grey;
+}
+
+#footer  {
+    border-top: 1px dashed #224;
+    margin-top: 2em;
+    text-align: right;
+    padding: 1em 0;
+    font-size: small;
+}
+
+#footer #goindex {
+    float: left;
+}
+
+#licence {
+    float:left
+}
